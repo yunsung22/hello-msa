@@ -6,6 +6,8 @@ class ProductBase(BaseModel):
     description: str
     price: float
 
+    class Config:
+        from_attributes=True
 
 class ProductCreate(ProductBase):
     pass
@@ -13,11 +15,6 @@ class ProductCreate(ProductBase):
 
 class Product(ProductBase):
     pno: int
-
-    class Config:
-        from_attributes=True
-
-
 
 
 
